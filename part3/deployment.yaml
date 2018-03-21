@@ -1,11 +1,11 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: my-app-deployment
   labels:
     app: my-app
 spec:
-  replias: 1
+  replicas: 1
   selector:
     matchLabels:
       app: my-app
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: gcr.io/va-dhopkins/my-app:latest
+        image: gcr.io/va-dhopkins/cmpt350-part3
         ports:
         - containerPort: 80
